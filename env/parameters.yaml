@@ -1,0 +1,10 @@
+adminUser:
+  password: local:cluster-1/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: kevin.chu@eclipx.com
+  token: local:cluster-1/pipelineUser:token
+  username: kevin-bot-ecx
+prow:
+  hmacToken: local:cluster-1/prow:hmacToken
