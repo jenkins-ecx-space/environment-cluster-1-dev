@@ -1,0 +1,45 @@
+
+Showing logs for build [32mjenkins-ecx-space-environment-c-fm7b8-1[0m stage [32mpr-checks[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1600868404.7206697,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mjenkins-ecx-space-environment-c-fm7b8-1[0m stage [32mpr-checks[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mjenkins-ecx-space-environment-c-fm7b8-1[0m stage [32mpr-checks[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mjenkins-ecx-space-environment-c-fm7b8-1[0m stage [32mpr-checks[0m and container [32mstep-git-source-jenkins-ecx-space-environment-c-fm7b8-278t9[0m
+{"level":"info","ts":1600868448.9887757,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/jenkins-ecx-space/environment-cluster-1-dev.git @ master in path /workspace/source"}
+{"level":"warn","ts":1600868448.98911,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1600868449.0249755,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mjenkins-ecx-space-environment-c-fm7b8-1[0m stage [32mpr-checks[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mjenkins-ecx-space-environment-c-fm7b8-1[0m stage [32mpr-checks[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:5fe891bb7284dbef5315c03cb24c0ceca5bafaea,1:4d28e09cae146c958ecfa340ee3a9d40865bc729
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 4d28e09cae146c958ecfa340ee3a9d40865bc729: 5fe891bb7284dbef5315c03cb24c0ceca5bafaea:
+DEBUG: ran git fetch --unshallow origin 4d28e09cae146c958ecfa340ee3a9d40865bc729: 5fe891bb7284dbef5315c03cb24c0ceca5bafaea: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 5fe891bb7284dbef5315c03cb24c0ceca5bafaea
+DEBUG: ran git reset --hard 5fe891bb7284dbef5315c03cb24c0ceca5bafaea in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 4d28e09cae146c958ecfa340ee3a9d40865bc729
+DEBUG: ran git merge 4d28e09cae146c958ecfa340ee3a9d40865bc729 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 5fe891bb7284dbef5315c03cb24c0ceca5bafaea..HEAD
+Merged SHA 4d28e09cae146c958ecfa340ee3a9d40865bc729 with commit message 'chore(deps): bump https://github.com/kevinchu85/**-tutorial.git' into base branch master
+
+Showing logs for build [32mjenkins-ecx-space-environment-c-fm7b8-1[0m stage [32mpr-checks[0m and container [32mstep-verify-parameters[0m
+error: resolve the secrets URIs: replacing secrets URIs: replacing vault paths in *****User:
+  password: local:cluster-1/*****User:password
+  username: *****
+enableDocker: false
+pipelineUser:
+  email: kevin.chu@eclipx.com
+  token: local:cluster-1/pipelineUser:token
+  username: *************
+prow:
+  hmacToken: local:cluster-1/prow:hmacToken
+: unable to find "password" in secret at "cluster-1/*****User"
+[31m
+Pipeline failed on stage 'pr-checks' : container 'step-verify-parameters'. The execution of the pipeline has stopped.[0m
